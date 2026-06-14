@@ -95,7 +95,7 @@ Para esferas:
 Q: select. Si se selecciona varias veces cambia el tipo area seleccionable.
 W: select and move
 E: select and rotate
-R: select and scale
+R: select and scale (si se apreta varias veces, cambia el tipo de escala: uniforme, no uniforme, etc. Importante para escalar un anillo de forma perfecta.)
 
 
 Customize -> Units setup
@@ -214,9 +214,98 @@ crear más divisiones a partir de geometria existente.
 
 
 Extensión de geometría:
-- Shift + click (ensegmento): crea un poligono a partir de un segmento. Deben ser parte de un borde.
-- Shift + click (en poligono): para extruir un poligono.
+- Shift + click (en segmento): crea un poligono a partir de un segmento. Deben ser parte de un borde. Se llama smart extrude.
+- Shift + click (en poligono): para extruir un poligono. Se llama smart extrude.
 - Extrude: para crear nueva geometría a partir de una selección poligonal. Para usarlo, seleccionar un poligono, click en extrude, y luego mover el mouse para elegir la altura de la extrusión.
 
 
 Nivel de selección de borde: selecciona los segmentos exteriores de un objeto.
+
+
+# Semana 4
+
+
+Los poligonos solo existen en un lado.
+- Normal: dirección a la cual el poligono está viendo directamente. Para ver las normales, en el panel de comandos, ir a display -> normals.
+
+
+Extrusión:
+- Para hacer extrusiones mas exactas, se puede dar click en el icono del dropdown del extrude. En este menu flotante, se pueden ingresar valores numéricos para la altura de la extrusión, así como también elegir el tipo de extrusión.
+
+- Extrusiones por normal agrupada
+- Extrusiones por normal local
+- Extrusiones por polygon
+
+La primera extrusión se hizo con normal local (la extrusión se hace en base a la normal). La segunda extrusión se hizo con polygon (la extrusión se hace respetando la dirección del poligono).
+
+![alt text](semana4/image.png)
+
+
+- Extrusión de vertices: también se puede extruir un vértice. Se puede usar para extruir los puntos donde corvengen varios segmentos.
+- Extrusión de edges: también se puede extruir un segmento.
+
+
+Chanfer:
+
+Herramienta para redondear los bordes de un objeto.
+
+- Recomendación es usar profundidad de 0.5 o -0.5.
+- Se puede usar para esquinas en vertices y en segmentos.
+
+
+Bevel:
+
+Similar a una extrusión, pero con la capacidad de escalar el nuevo poligono creado. 
+
+También funciona con:
+
+- Bevel por normal agrupada
+- Bevel por normal local
+- Bevel por polygon
+
+
+Inset:
+
+Herramienta para crear un nuevo poligono dentro de un poligono existente.
+
+Attach:
+
+Para meter varias mallas en un solo objeto. Esto hará que se puedan seleccionar por separado a nivel de elemento.
+
+
+Bridge:
+
+Para crear un "puente" entre dos o mas elementos seleccionados.
+
+Se pueden crear puentes entre:
+- Poligonos, segmentos y bordes.
+
+Cap poly:
+
+Para cerrar un agujero en la malla. Se puede usar para cerrar agujeros creados por extrusiones, o para cerrar agujeros creados por eliminar poligonos.
+Importante: crea un solo poligono.
+
+
+Connect:
+
+Para hacer una subdivisión de un poligono, creando un nuevo segmento que conecta dos vertices. Lo hace perpendicular al segmento seleccionado.
+
+Funciona por inclusion y no por rango
+
+
+Target:
+
+Es como weld (soldadura) pero con la capacidad de elegir un vértice específico al cual hacer el weld. Para usarlo, seleccionar un vértice, click en target, y luego click en el vértice al cual se desea hacer el weld.
+
+
+
+Weld:
+
+Dos o más vertices se fusionan en un centro en común. Utiliza un parámetro de tolerancia para determinar qué vértices se fusionan. Empieza a contar desde el centro de la selección. El before y el after muestrán la cantidad de vertices antes y después de la operación de weld.
+
+Geopoly:
+
+Para convertir un objeto paramétrico en un objeto poligonal. Solo funciona en poligonos individuales. Esto es importante para poder modificar la geometría a nivel de subobjetos. Para usarlo, seleccionar el objeto, click derecho, y luego click en convert to -> convert to editable poly.
+
+Para hacerlo en una caja: hacer un inset de varios poligonos -> eliminar los poligonos internos -> seleccionar usando bordes -> cap poly para cerrar el agujero -> seleccionar el poligono creado -> click en geopoly.
+
