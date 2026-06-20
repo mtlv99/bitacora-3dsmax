@@ -309,3 +309,60 @@ Para convertir un objeto paramétrico en un objeto poligonal. Solo funciona en p
 
 Para hacerlo en una caja: hacer un inset de varios poligonos -> eliminar los poligonos internos -> seleccionar usando bordes -> cap poly para cerrar el agujero -> seleccionar el poligono creado -> click en geopoly.
 
+
+
+Constraints:
+
+Constrain to edge: para mover un vértice a lo largo de un segmento específico.
+
+
+Semana 5:
+
+Shapes
+
+Formas bidimensionales. Solo están formados por lineas y vertices. Se llaman splines.
+
+Para acceder, se va al menu del "+", y se selecciona el icono de shapes (segunda opción). Hay varias formas predefinidas, como por ejemplo: line, circle, arc, etc.
+
+Recomendación: para trabajar con shapes, hacerlo solo desde visores isométricos.
+
+Interpolación de vertices: para dividir un segmento y sacar mas vertices "falsos" o internos. Steps en 0 significa que se comportará como un segmento normal, sin vertices internos. Es un paramámetro del shape.
+
+
+Para usar modificadores, hay que aplicar un edit spline. Solo tienen 3 nivel de subojetos al ser más simples.
+
+Para cambiar tipo de vertice, click derecho en vertice:
+
+![alt text](Semana5/image.png)
+
+Tipos de vertice:
+
+- Corner: vértice normal. No tiene influencia en los segmentos que lo conectan. Solo se modifican a traves de herramientas de transformación.
+
+- Smooth: vértice suave. Produce curvas perfectas.
+
+- Bezier: vértice suave. Tiene puntos de control para modificar la curva. Los puntos de control son proporcionalmente inversos. Importante: Utilizar en puntos medios de una curva.
+
+- Bezier corner: todos los anterior en un mismo tipo de vertice. Permite dar lineas rectas y lineas curvas. Importante: utilizar en extremos una curva o cuando necesitamos que cambie de dirección.
+
+Nota: la interpolación se aplica aunque el vértice sea corner.
+Nota 2: si se elimina un vertice, el resto se conectarán sin ese vertice que se eliminó.
+
+Para agregar otro vertice, en las propiedades del shape, ir a geometry -> refine.
+
+Shapes:
+
+- Line: forma básica de shape. Solo tiene segmentos rectos. Haciendo click se crea un vértice. Para cerrar el shape, click en el primer vértice creado. Para crear curvas, hay que dar click y mover el mouse a un punto cercano.
+
+Para retomar un spline sin crear otro nuevo, usar Geometry -> insert.
+Para agregar un spline dentro del mismo shape, usar Geometry -> Create line.
+
+
+----
+
+Modificadores:
+
+- Extrude: solo funciona para splines. Genera extrusiones en base a la forma del spline.
+  - Capping funciona para escojer si ambos lados se generan con geometria o no.
+
+Nota: se pueden copiar modificadores entre objetos.
