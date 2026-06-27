@@ -366,3 +366,90 @@ Modificadores:
   - Capping funciona para escojer si ambos lados se generan con geometria o no.
 
 Nota: se pueden copiar modificadores entre objetos.
+
+
+Semana 6:
+
+Shift + ctrl + eje del gizmo: para hacer copia de algunos poligonos
+
+----
+
+Para alinear objetos en un eje:
+
+Hierarchy -> Adjust pivot -> Move/Rotate/Scale
+
+Affect pivot only: para mover el punto de pivote sin mover el objeto.
+- Shortcut: Insert
+Reset pivot para devolver el pivote al punto donde estaba cuando se creo el objeto.
+
+
+Para alinear vertices en un eje:
+
+Edit poly -> seleccionar vertices -> align -> X/Y/Z
+
+----
+
+### Modifier symmetry
+
+para hacer simetría de un objeto. Se puede hacer en cualquier eje. Se puede usar para modelar solo la mitad de un objeto y que el otro lado se genere automáticamente.
+
+
+----
+
+Splines (herramientas de vertice):
+
+Geometry -> End point auto-welding: es el equivalente a un target. Solo funciona para vertices sin cerrarse.
+- Activar automatic welding
+
+
+Geometry -> Weld: para soldar vertices. Hay que modificar el radio de tolerancia para que funcione, y tener los 2 o más vertices seleccionados.
+Geometry -> Connect: equivalente a un bridge. Permite conectar varios vertices
+
+Un vertice de un spline no puede soportar mas de 2 segmentos.
+
+Geometry -> Fillet: para redondear esquinas. Funciona parecido al redondeo de CSS.
+Geometry -> Chamfer: para esquinas. Genera un bisel 
+
+
+Splines (herramientas de spline completo):
+
+Geometry -> Outline: para generar un borde/outline sobre el spline
+- Check de Center: para usar el borde como referencia y generar el outline en base a eso.
+
+
+Geometry -> Boolean:
+
+Se requieren 2 sub-splines
+
+- Union: para unir 2 contornos
+- Sustraccion: para quitar 2 contornos
+- Intersección: dejar solo la intersección de 2 formas.
+
+
+Para sacar splines de Illustrator -> guardar en version 8. Pasar a curvas el texto.
+
+### Sweep modifier:
+
+Sweep (barrer, siguiendo una trayectoria). Para crear un volumen a partir de un spline, siguiendo su trayectoria.
+
+Section type:
+
+Use built-in section: para usar formas definidas.
+- Tienen parámetros de modificación.
+
+Use custom section:
+Section -> Pick (hacer click sobre la forma). Se selecciona por defecto como instance. Si se modifica en la forma custom, afecta también al sweep
+
+
+Cambio o modificación destructiva: cambios que no tienen manera de revertirlo.
+
+### Chanfer modifier
+
+Funciona como un chanfer normal, pero no aplica como cambio destructivo. También se puede aplicar a edges y polygons especificos.
+
+- Convert to poly: funciona similar a Blender, al aplicar todos los modificadores. Cambio destructivo.
+
+
+### Taper modifier
+
+Genera un estrechamiento en alguno de los extremos. El taper se aplica en el punto de pivote. Para modificarlo con mas precisión hacer click sobre el taper modifier.
