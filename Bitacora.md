@@ -316,7 +316,7 @@ Constraints:
 Constrain to edge: para mover un vértice a lo largo de un segmento específico.
 
 
-Semana 5:
+# Semana 5:
 
 Shapes
 
@@ -368,7 +368,7 @@ Modificadores:
 Nota: se pueden copiar modificadores entre objetos.
 
 
-Semana 6:
+# Semana 6:
 
 Shift + ctrl + eje del gizmo: para hacer copia de algunos poligonos
 
@@ -453,3 +453,105 @@ Funciona como un chanfer normal, pero no aplica como cambio destructivo. Tambié
 ### Taper modifier
 
 Genera un estrechamiento en alguno de los extremos. El taper se aplica en el punto de pivote. Para modificarlo con mas precisión hacer click sobre el taper modifier.
+
+
+
+## Semana 7
+
+Para resolver la parte del proyecto que no pude copiar (rellenar), se puede seleccionar la maya que se quiere copiar y darle ctrl + shift + c, y lo mas importante es darle FLIP a las normales del elemento recien creado.
+
+Algo importante de extrusiones es que si se hace una extrusión, en la posición original del poligono no queda otro poligono, sino que queda un agujero.
+
+![alt text](image.png)
+
+### Extrude modifier
+
+Para realizar una extrusión no destructiva. Importante agregar segmentos para un bend modifier posterior. El extrude se aplica en el punto de pivote.
+
+### Bend modifier
+
+Para doblar un objeto. Se puede elegir el eje de doblado, y el ángulo de doblado. El bend se aplica en el punto de pivote (para hacer una C habría que poner el punto de pivote en el medio, por ejemplo). Para modificarlo con mas precisión hacer click sobre el bend modifier.
+
+### Lattice modifier
+
+Para hacer un efecto de rejilla. Se puede elegir el eje de la rejilla, y el tamaño de la rejilla.
+
+Geometry:
+Apply to Entire Object
+Joints Only from vertices -> solo genera esferas en vertices
+Structs Only from Edges -> solo genera estructuras en edges (esquinas quedan vacías)
+Both -> genera tanto esferas como estructuras
+
+Struts
+Radius: tamaño de la estructura
+
+Joints
+Radius: tamaño de la estructura
+
+
+Mantener radius en ambos para hacer una rejilla uniforme.
+
+## Noise modifier
+
+Para hacer generar un efecto de terreno irregular. Se puede elegir el eje de la deformación, y el tamaño de la deformación.
+- Scale para cambiar el tamaño de la deformación
+- Strength en eje Z
+
+## Shell modifier
+
+Funciona como un extrude de tipo normal local, pero no genera un agujero en el poligono original.
+
+Inner Amount: para hacer un extrude hacia adentro
+Outer Amount: lado hacia donde van las normales
+
+Hay que tener cuidado con el shell, debido a que en las esquinas los segmentos diagonales ocupan valores mas largos que los amounts, por lo que hay que seleccionar la opción de "straighten corners" para que las esquinas al final.
+
+## Lathe modifier
+
+Para hacer un objeto 3D a partir de un spline. Para objetos con secciones circulares, como un vaso de vino o una botella. Lo que hace es rotar el spline alrededor de un eje central, generando un objeto 3D.
+
+- Hay que saber el eje de rotación que está aplicando el modificador. Poner en 0 para ver donde está el eje de rotación. Para cambiarlo, seleccionar Lathe e ir a
+- Align -> Min: Limite mínimo del spline
+- Align -> Center: centro del spline (valor por defecto al crear un spline)
+- Align -> Max: Limite máximo del spline
+
+Direction: para cambiar la dirección de rotación del spline. Para objetos acostados.
+- Align solo funciona para rotaciones en eje Z, por lo que hay que alinear el eje de rotación para otros ejes manualmente.
+
+- Segmentos: para cambiar la cantidad de segmentos que se generan al rotar el spline
+
+- Weld core: para soldar el eje central del objeto generado. Esto es para limpiar artefactos de geometría que se generan al rotar el spline. Si no se activa, el eje central del objeto generado tendrá algunos agujeros.
+
+- Se puede poner el eje rotación entrnado al modificador, y usar un snap para ponerlo donde debería estar.
+
+
+## Boolean modifier
+
+Para realizar modificaciones usando operandos. Siempre se debe usar con el Retopology modifier, para que la geometría generada sea limpia y no genere errores de geometría.
+
+- Union: para unir 2 o más objetos. Se puede usar para hacer un objeto mas complejo a partir de 2 objetos simples.
+- Subtraction: para restar 2 o más objetos. Se puede usar para hacer un agujero en un objeto a partir de otro objeto.
+- Intersection: para dejar solo la intersección de 2 o más objetos. Deja solo el área donde se intersectan los objetos.
+- Split: para dividir el objeto en su intersección y dejarlo en otro elemento.
+
+
+Se pueden aplicar n operandos.
+
+Para editar el objeto original se puede seleccionar el modificador y seleccionar el objeto original, y luego modificarlo. Incluso se puede cambiar el tipo de operando, y el objeto original se mantendrá intacto.
+
+Seleccionar Extract Selected para quitar un objeto como operando.
+
+
+## Retopología
+
+Proceso para reducir la cantidad de poligonos de un objeto sin perder detalles de la geometría original. 
+
+## Retopology modifier
+
+Modificador para limpiar la geometría de un objeto. Se puede usar para limpiar la geometría de un objeto generado por un booleano, o cualquier maya que no tenga buena integridad. El face count nos permite controlar el nivel de detalle de la geometría generada. Debe ser el menor numero de face count posible sin sacrificar los detalles de la maya original.
+
+## Suavizado de mallas
+
+Integridad: que la maya esté bien conectada, sin agujeros ni errores de geometría.
+
+Para realizar un suavizado de mallas, se ocupa una malla con integridad.
