@@ -555,3 +555,106 @@ Modificador para limpiar la geometría de un objeto. Se puede usar para limpiar 
 Integridad: que la maya esté bien conectada, sin agujeros ni errores de geometría.
 
 Para realizar un suavizado de mallas, se ocupa una malla con integridad.
+
+# Semana 8
+
+## Suavizado de mallas
+
+## Turbosmooth modifier
+
+Las iteraciones del suavizado de mallas son muy similares a las interpolaciones de los splines, por lo que si se aplica un turbosmooth en un plano de un solo segmento, se crean 4 segmentos.
+
+Una iteración va a subdividir un poligono en 4 poligonos. Por lo que si se aplica un turbosmooth a un objeto con 100 poligonos, se generarán 400 poligonos.
+
+Usualmente no se ocupan más de 3 iteraciones, hay que tener cuidado con la cantidad de iteraciones, ya que puede generar una cantidad de poligonos muy grande y hacer que el programa se trabe o crashee.
+
+
+Para poligonos, no hay diferencia entre rings y loops. Si se selecciona un loop desde la UI, se selecciona en ambos sentidos porque lo hace en base a segmentos cercanos, debido a que el programa no sabe a cual dirección ir.
+
+Edit poly:
+- Ctrl + click sobre un poligono que esté seleccionado a la par de otro poligono.
+
+Importante: el smooth se aplica sobre los loops.
+
+Existen tres maneras para suavizar una malla con el turbosmooth y darle bordes/filos donde se requiera. La que veremos en el curso será con Smoothing Groups.
+
+## Grupos de suavizado
+
+Se hace desde el nivel de subobjeto de poligono.
+
+Properties al final -> SmGroups
+
+SmGroups: (smoothing groups) para crear grupos de suavizado. Se pueden crear varios grupos de suavizado, y se pueden asignar a los poligonos que se desee.
+
+Por defecto, todos se crean con grupos de suavizado automaticos. Se deben seleccionar todos los poligonos y darle a Clear All. Luego dividir los poligonos en los grupos deseados.
+
+Luego en el modificador de turbo smooth, hay que seleccionar la opción de Separate by -> Smoothing Groups.
+
+Select by SG = para seleccionar todos los poligonos que pertenecen a un grupo de suavizado específico. SG = Smoothing group
+
+
+## Para instalar Vray
+
+Descargar .zip que pasó el profe, descomprimirlo, y luego abrir el instalador. Seguir el proceso del instalador sin escoger licencia.
+
+Luego, en el zip vienen 2 archivos, un .dlr y otro que es un .dll.
+
+
+El `vray_73002_fix.dlr` se debe copiar dentro de:
+- C:\Program Files\Autodesk\3ds Max 2026\Plugins
+
+El `vray_73002_max_fix.dll` se debe copiar dentro de:
+- C:\ProgramData\Autodesk\ApplicationPlugins\VRay3dsMax2026\bin\plugins
+
+## Cámaras
+
+Funcionan igual que una cámara real. Se pueden modificar parámetros como la apertura del lente, la distancia focal, etc.
+
+El target se representan con un cubo. Se puede mover el cubo para cambiar la dirección de la cámara. Si se mueve la cámara, el target siempre se mantiene enfocado en el punto del cubo.
+
+Para agregar una cámara, se ocupa que sea desde un visor de perspectiva.
+- Notar que se cambia el nombre del visor a la cámara que se acaba de crear.
+- Ctrl + C para crear una cámara con la cámara actual.
+- Para crear otra cámara, se debe hacer sin seleccionar ninguna cámara.
+
+
+Para ver todas las cámaras, se puede con la tecla C.
+
+## Motores de renderizado
+
+Se puede usar para renderizar escenas con iluminación global, materiales avanzados, y efectos de cámara. Como EEVEE y Cycles.
+
+Hay algunos motores nativos que trae el 3DS Max:
+- Scanline renderer: motor de renderizado básico. No tiene muchas opciones avanzadas, obsoleto. Pero aún se puede usar para renderizar escenas simples si se ocupara. Se ocupa un poco más de trabajo para obtener buenos resultados.
+- Arnold renderer: motor de renderizado avanzado. Anteriormente conocido como MentalRay desde 2017. Tiene muchas opciones avanzadas, pero es más lento que Vray.
+- Corona renderer: motor de renderizado avanzado por Render Legion. Es muy efectivo en los tiempos de renderizad.
+- Vray renderer: motor de renderizado avanzado por Chaos Group. Es muy efectivo en los tiempos de renderizado.
+
+
+## Rendering
+
+Para renderizar:
+
+Menu rendering -> Render setup o bien apretar F10, y luego darle click al botón grande que dice Render.
+- Shift + Q para renderizar la escena en el visor de renderizado.
+
+Para cambiar motor de renderizado:
+
+Render setup -> Renderer (es un dropdown)
+- Vray 7, update 3 DR2 (usar este)
+- Vray 7 GPU, update 3 DR2
+
+
+
+
+Para cambiar el tamaño del output, se puede desde Common -> Output Size.
+
+
+Para guardar archivos, hacerlo desde la vista de renderizado de Vray.
+
+Para habilitar el historial -> Options -> VFB Settings. Este historial se guarda a traves de todos los archivos.
+
+![alt text](image.png)
+
+A la derecha hay opciones de post, como exposure y lens effects
+- Recomendado activar Lens Effects, dandole click y habilitando el check de Enable Lens Effects.
