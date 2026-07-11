@@ -13,6 +13,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Bitácora - Modelado 3D I',
+			description: 'Bitácora del curso de Modelado 3D I con 3ds Max.',
 			social: [
 				{
 					icon: 'github',
