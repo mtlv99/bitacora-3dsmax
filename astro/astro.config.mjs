@@ -12,7 +12,7 @@ export default defineConfig({
 	base: `/${REPO_NAME}/`,
 	integrations: [
 		starlight({
-			title: 'Bitácora — Modelado 3D I',
+			title: 'Bitácora - Modelado 3D I',
 			social: [
 				{
 					icon: 'github',

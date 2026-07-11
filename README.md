@@ -2,6 +2,8 @@
 
 Bitácora de clase para el curso de **Modelado 3D I**, usando el software **3ds Max**.
 
+Link: https://mtlv99.github.io/bitacora-3dsmax/ 
+
 El sitio se publica como una página con [Astro](https://astro.build) + [Starlight](https://starlight.astro.build) y se despliega automáticamente en GitHub Pages.
 
 ## Estructura del proyecto
