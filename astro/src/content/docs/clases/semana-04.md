@@ -1,5 +1,5 @@
 ---
-title: Semana 4 — Edición de malla
+title: Semana 4 - Edición de malla
 description: "Normales, extrusiones, chamfer, bevel, bridge, weld y otras herramientas de edición poligonal."
 ---
 
@@ -21,7 +21,7 @@ ese menú flotante se ingresan valores numéricos para la altura y se elige el t
 - Extrusión por **normal local**
 - Extrusión por **polygon**
 
-![Comparación de tipos de extrusión: normal local vs polygon](../../../assets/semana4.png)
+![Comparación de tipos de extrusión: normal local vs polygon](../../../assets/Semana4/semana4.png)
 
 :::note[En la imagen]
 La primera extrusión se hizo con **normal local** (se extruye según la normal).
@@ -39,7 +39,7 @@ También se puede extruir:
 
 Redondea los bordes de un objeto.
 
-:::tip
+:::tip{icon="pencil"}
 Se recomienda usar profundidad de `0.5` o `-0.5`. Funciona en esquinas, tanto en
 vértices como en segmentos.
 :::
@@ -87,7 +87,7 @@ tolerancia para decidir qué vértices se fusionan, contando desde el centro de 
 selección. El *before / after* muestra la cantidad de vértices antes y después.
 
 <details>
-<summary>Geopoly — convertir a objeto poligonal</summary>
+<summary>Geopoly - convertir a objeto poligonal</summary>
 
 Convierte un objeto paramétrico en poligonal (solo funciona en polígonos
 individuales). Necesario para modificar la geometría a nivel de subobjetos.

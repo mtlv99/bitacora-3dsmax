@@ -4,46 +4,62 @@ description: "Bitácora del curso de Modelado 3D I con 3ds Max."
 template: splash
 ---
 
+import { Image } from 'astro:assets';
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import logo from '../../assets/General/logo.png';
 
-Bitacora del curso de **Modelado 3D I**, usando **3ds Max**.
+<div>
+  <Image src={logo} alt="Logo" />
+</div>
+
 
 ## Clases
 
+Bitacora del curso de Modelado 3D I, usando **3ds Max**.
+
+- **Estudiante:** Marco León
+- **Profesor:** Randall Picado
+
+<br/>
+
 <CardGrid>
-  <Card title="Semana 1 — Interfaz y navegación" icon="laptop">
+  <Card title="Semana 1 - Interfaz y navegación" icon="laptop">
     Primer contacto con 3ds Max: la interfaz, los visores y la navegación básica.
 
     [Ver la semana 1 →](clases/semana-01/)
   </Card>
-  <Card title="Semana 2 — Objetos y transformaciones" icon="setting">
+  <Card title="Semana 2 - Objetos y transformaciones" icon="setting">
     Objetos paramétricos, snaps, agrupación, clonado y modificación con FFD.
 
     [Ver la semana 2 →](clases/semana-02/)
   </Card>
-  <Card title="Semana 3 — Modelado poligonal" icon="puzzle">
+  <Card title="Semana 3 - Modelado poligonal" icon="puzzle">
     Subobjetos, métodos de selección y subdivisión de geometría.
 
     [Ver la semana 3 →](clases/semana-03/)
   </Card>
-  <Card title="Semana 4 — Edición de malla" icon="pencil">
+  <Card title="Semana 4 - Edición de malla" icon="pencil">
     Normales, extrusiones, chamfer, bevel, bridge, weld y más herramientas.
 
     [Ver la semana 4 →](clases/semana-04/)
   </Card>
-  <Card title="Semana 5 — Shapes y splines" icon="pen">
+  <Card title="Semana 5 - Shapes y splines" icon="pen">
     Formas bidimensionales, tipos de vértice y modificadores de spline.
 
     [Ver la semana 5 →](clases/semana-05/)
   </Card>
-  <Card title="Semana 6 — Pivotes y modificadores" icon="random">
+  <Card title="Semana 6 - Pivotes y modificadores" icon="random">
     Pivotes, alineación, symmetry, boolean, sweep, chamfer y taper.
 
     [Ver la semana 6 →](clases/semana-06/)
   </Card>
-  <Card title="Semana 7 — No destructivos y retopología" icon="rocket">
+  <Card title="Semana 7 - No destructivos y retopología" icon="rocket">
     Extrude, bend, lattice, noise, shell, lathe, boolean y retopología.
 
     [Ver la semana 7 →](clases/semana-07/)
+  </Card>
+  <Card title="Semana 8 - Suavizado y renderizado" icon="star">
+    Turbosmooth, grupos de suavizado, V-Ray, cámaras y motores de renderizado.
+    [Ver la semana 8 →](clases/semana-08/)
   </Card>
 </CardGrid>

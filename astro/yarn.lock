@@ -2312,7 +2312,7 @@ mdast-util-mdx-expression@^2.0.0:
     mdast-util-from-markdown "^2.0.0"
     mdast-util-to-markdown "^2.0.0"
 
-mdast-util-mdx-jsx@^3.0.0:
+mdast-util-mdx-jsx@^3.0.0, mdast-util-mdx-jsx@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/mdast-util-mdx-jsx/-/mdast-util-mdx-jsx-3.2.0.tgz#fd04c67a2a7499efb905a8a5c578dddc9fdada0d"
   integrity sha512-lj/z8v0r6ZtsN/cGNNtemmmfoLAFZnjMbNyLzBafjzikOM+glrjNHPlf6lQDOTccj9n5b0PPihEBbhneMyGs1Q==
@@ -3412,6 +3412,16 @@ space-separated-tokens@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/space-separated-tokens/-/space-separated-tokens-2.0.2.tgz#1ecd9d2350a3844572c3f4a312bceb018348859f"
   integrity sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==
+
+starlight-image-zoom@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/starlight-image-zoom/-/starlight-image-zoom-0.15.0.tgz#df53e751968b56339e65e4580f5de4ac312f5ab7"
+  integrity sha512-GIZVuaiaVuFsbyYqiT7M4FYJBvkTsvdO1XoOKM/iNHt85BaVn/A7/kLpdb5XnUsAZohOMS77ahaolofnGIqeOQ==
+  dependencies:
+    mdast-util-mdx-jsx "^3.2.0"
+    rehype-raw "^7.0.0"
+    unist-util-visit "^5.1.0"
+    unist-util-visit-parents "^6.0.2"
 
 stream-replace-string@^2.0.0:
   version "2.0.0"

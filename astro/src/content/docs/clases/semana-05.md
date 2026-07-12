@@ -1,5 +1,5 @@
 ---
-title: Semana 5 — Shapes y splines
+title: Semana 5 - Shapes y splines
 description: "Formas bidimensionales (splines), tipos de vértice y los primeros modificadores de spline."
 ---
 
@@ -10,7 +10,7 @@ Formas bidimensionales, formadas solo por líneas y vértices. Se llaman **splin
 Para acceder: menú del **+** → icono de *shapes* (segunda opción). Hay formas
 predefinidas: line, circle, arc, etc.
 
-:::tip
+:::tip{icon="pencil"}
 Para trabajar con shapes, hacerlo solo desde **visores isométricos**.
 :::
 
@@ -27,7 +27,7 @@ los splines solo tienen 3 niveles de subobjetos.
 
 Clic derecho en un vértice para cambiar su tipo:
 
-![Menú contextual con los tipos de vértice de un spline](../../../assets/semana5.png)
+![Menú contextual con los tipos de vértice de un spline](../../../assets/Semana5/semana5.png)
 
 | Tipo | Comportamiento |
 | --- | --- |
@@ -63,6 +63,6 @@ Solo funciona para splines. Genera extrusiones según la forma del spline.
 **Capping** decide si ambos lados se generan con geometría o no.
 :::
 
-:::tip
+:::tip{icon="pencil"}
 Se pueden copiar modificadores entre objetos.
 :::

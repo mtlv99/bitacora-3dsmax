@@ -1,11 +1,11 @@
 ---
-title: Semana 3 — Modelado poligonal
+title: Semana 3 - Modelado poligonal
 description: "Introducción al modelado poligonal: subobjetos, selección y subdivisión de geometría."
 ---
 
 ## Orientación y referencias
 
-:::tip
+:::tip{icon="pencil"}
 Para controlar la orientación de los objetos al crearlos, crearlos desde la
 perspectiva **Front**.
 :::
@@ -36,7 +36,7 @@ menú *Modeling* y marcar *Apply Edit Poly*.
 
 ## Los 5 niveles de subobjetos
 
-![Los cinco niveles de subobjetos en el panel de Edit Poly](../../../assets/semana3.png)
+![Los cinco niveles de subobjetos en el panel de Edit Poly](../../../assets/Semana3/semana3.png)
 
 | Tecla | Nivel |
 | --- | --- |
@@ -60,7 +60,7 @@ subnivel aplicado.
 | Loop | Doble clic en un segmento |
 | Ring | `Ctrl` + doble clic en un segmento |
 
-:::tip
+:::tip{icon="pencil"}
 Se pueden aplicar modificadores a solo una parte de una selección poligonal.
 Aplicar varios **Edit Poly** da mayor control y ayuda a quitar el color rojo de
 los segmentos.
@@ -83,5 +83,5 @@ Crear más divisiones a partir de geometría existente:
 | Extrude | Crea geometría nueva desde una selección poligonal: seleccionar, clic en extrude y mover el mouse para la altura |
 
 :::note
-El **nivel de selección de borde** selecciona los segmentos exteriores de un objeto.
+El **nivel de selección de borde** selecciona los segmentos exteriores de un objeto, donde "no hay más objeto". 
 :::

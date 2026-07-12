@@ -1,5 +1,5 @@
 ---
-title: Semana 2 — Objetos paramétricos y transformaciones
+title: Semana 2 - Objetos paramétricos y transformaciones
 description: "Crear y modificar objetos, snaps, agrupación, clonado y modificación específica con FFD."
 ---
 
@@ -34,21 +34,24 @@ El **Modifier list** es el registro de modificadores aplicados.
 
 ## Herramientas de transformación
 
+
+![alt text](../../../assets/Semana2/image.png)
+
 | Atajo | Herramienta | Nota |
 | --- | --- | --- |
-| `Q` | Select | Al repetir, cambia el tipo de área seleccionable |
-| `W` | Select and move | |
-| `E` | Select and rotate | |
-| `R` | Select and scale | Al repetir, cambia el tipo de escala (uniforme, no uniforme…) |
+| `Q` | Select | Al repetir, cambia el tipo de área seleccionable (cuadrado rojo izquierdo) |
+| `W` | Select and move | (cuadrado derecho, primera opción) |
+| `E` | Select and rotate | (cuadrado derecho, segunda opción) | 
+| `R` | Select and scale | (cuadrado derecho, tercera opción) [Al repetir, cambia el tipo de escala (uniforme, no uniforme…)]  |
 
-:::tip[Escalar un anillo perfecto]
-Repetir `R` cambia entre escala uniforme y no uniforme, lo cual es clave para
+:::tip[Escalar un anillo perfecto]{icon="pencil"}
+Repetir `R` cambia entre escala uniforme y no uniforme, lo cual es necesario para
 escalar un anillo de forma perfecta.
 :::
 
 ### Coordenadas
 
-Configurar unidades en `Customize → Units setup`.
+Configurar unidades en `Customize → Units setup`. Yo seleccioné metros.
 
 Las **coordenadas universales o absolutas** están abajo en la UI: son las
 coordenadas del objeto respecto al origen del mundo.
@@ -58,8 +61,8 @@ coordenadas del objeto respecto al origen del mundo.
 
 Clic derecho en **Select and move**:
 
-- **Absolute: world** — coordenadas del objeto respecto al origen del mundo.
-- **Offset world** — para hacer operaciones matemáticas.
+- **Absolute: world** - coordenadas del objeto respecto al origen del mundo.
+- **Offset world** - para hacer operaciones matemáticas.
 
 </details>
 
@@ -101,7 +104,8 @@ grande pero no modifica sus parámetros de transformación.
 | Tipo | Relación con el original |
 | --- | --- |
 | **Copy** | Copia independiente, sin relación con el original |
-| **Reference** | Copia vinculada: al modificar el original, todas las instancias cambian |
+| **Instance** | Copia vinculada: al modificar el original, todas las instancias cambian. Ejemplo: si el objeto original se rota, acá también se rota. |
+| **Reference** | Se usa otro objeto ya creado como referencia, y se pueden aplicar cambios sobre éste. Si el objeto original cambia, también se verá en reflejado en la referencia. Ejemplo: si el objeto original se rota, acá NO se rota. Pero si su malla cambia, si cambiará acá también. |
 
 :::note
 En el **Modifier list**, un elemento en **negrita** significa que es una instancia.

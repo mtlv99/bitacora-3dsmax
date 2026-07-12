@@ -1,11 +1,11 @@
 ---
-title: Semana 7 — Modificadores no destructivos y retopología
+title: Semana 7 - Modificadores no destructivos y retopología
 description: "Extrude, bend, lattice, noise, shell, lathe y boolean modifiers, más retopología y suavizado de mallas."
 ---
 
-## Trucos de proyecto
+## Dudas sobre el proyecto parcial
 
-:::tip[Rellenar una parte que no se pudo copiar]
+:::tip[Rellenar una parte que no se pudo copiar]{icon="pencil"}
 Seleccionar la malla a copiar y pulsar `Ctrl + Shift + C`. Lo más importante:
 darle **FLIP** a las normales del elemento recién creado.
 :::
@@ -15,7 +15,7 @@ Al hacer una extrusión, en la posición original del polígono **no queda otro
 polígono**, sino un agujero.
 :::
 
-![Ejemplo del agujero que deja una extrusión en el polígono original](../../../assets/semana7.png)
+![Ejemplo del agujero que deja una extrusión en el polígono original](../../../assets/Semana7/semana7.png)
 
 ## Extrude modifier
 
@@ -30,7 +30,7 @@ Importante agregar segmentos para un **bend modifier** posterior.
 Dobla un objeto. Se elige el eje y el ángulo de doblado. Se aplica en el punto de
 pivote.
 
-:::tip
+:::tip{icon="pencil"}
 Para hacer una **C**, poner el punto de pivote en el medio. Para más precisión,
 clic sobre el bend modifier.
 :::
@@ -51,7 +51,7 @@ Genera un efecto de rejilla. Se elige el eje y el tamaño.
 - **Struts → Radius:** tamaño de la estructura.
 - **Joints → Radius:** tamaño de la estructura.
 
-:::tip
+:::tip{icon="pencil"}
 Mantener el mismo *radius* en ambos para una rejilla uniforme.
 :::
 
@@ -135,8 +135,11 @@ cualquier malla sin buena integridad). El **face count** controla el nivel de
 detalle: debe ser el menor posible sin sacrificar los detalles de la malla original.
 
 ## Suavizado de mallas
-
+ 
 :::note[Integridad]
 Que la malla esté bien conectada, sin agujeros ni errores de geometría. Para
 suavizar una malla se necesita una malla con integridad.
 :::
+ 
+El suavizado en sí se ve en la [Semana 8](../semana-08/), con el **Turbosmooth
+modifier** y los grupos de suavizado.

@@ -1,17 +1,20 @@
 ---
-title: Semana 1 — Interfaz y navegación
+title: Semana 1 - Interfaz y navegación
 description: "3ds Max: la interfaz, los visores y la navegación básica."
 ---
 
 
 ## Rúbrica de clase
 
-![Rúbrica de clase](../../../assets/semana1.png)
+![Rúbrica de clase](../../../assets/Semana1/image0.png)
 
 
-**3ds Max**: la interfaz, los visores y cómo moverse por la escena.
+Temas: la interfaz, los visores y cómo moverse por la escena.
 
 ## Zonas de la interfaz
+
+![alt text](../../../assets/Semana1/image1.png)
+
 
 | Zona | Ubicación | Para qué sirve |
 | --- | --- | --- |
@@ -36,6 +39,8 @@ la UI. Hay varias a lo largo de la ventana.
 
 ## Los visores
 
+![alt text](../../../assets/Semana1/image3.png)
+
 Cambiar la perspectiva del visor con el **segundo corchete** `[Top/Left/Front/Perspective]`.
 Cambiar el fondo con el **cuarto corchete** `[Default shading]`.
 
@@ -45,6 +50,9 @@ Cambiar el fondo con el **cuarto corchete** `[Default shading]`.
 
 ### Atajos de navegación
 
+
+![alt text](../../../assets/Semana1/image2.png)
+
 | Atajo | Acción |
 | --- | --- |
 | `Alt + W` | Maximizar / restaurar el visor activo |
@@ -53,7 +61,7 @@ Cambiar el fondo con el **cuarto corchete** `[Default shading]`.
 | `F4` | Alternar edge faces (importante) |
 | `Alt + clic central` | Orbitar |
 | `Clic central` | Panear |
-| Scroll del mouse | Zoom |
+| `Scroll del mouse` | Zoom |
 | `Z` | Zoom extents (maximiza lo que hay en la escena) |
 
 :::note
@@ -61,6 +69,8 @@ Cambiar el fondo con el **cuarto corchete** `[Default shading]`.
 :::
 
 ## Selección y transformación
+
+![alt text](../../../assets/Semana1/image4.png)
 
 - **Objeto seleccionable:** al pasar el cursor, el borde se pone amarillo.
 - **Objeto seleccionado:** el borde se pone celeste.

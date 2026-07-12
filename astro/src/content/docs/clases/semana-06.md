@@ -1,13 +1,15 @@
 ---
-title: Semana 6 — Pivotes, splines avanzados y modificadores
+title: Semana 6 - Pivotes, splines avanzados y modificadores
 description: "Puntos de pivote, alineación, symmetry, herramientas de spline, boolean, sweep, chamfer y taper."
 ---
 
-:::tip
+:::tip{icon="pencil"}
 `Shift + Ctrl + eje del gizmo`: hace una copia de algunos polígonos.
 :::
 
 ## Puntos de pivote
+
+El punto de referencia que se utiliza para aplicar transformaciones, rotaciones y escalaciones.
 
 <details>
 <summary>Alinear objetos en un eje</summary>
