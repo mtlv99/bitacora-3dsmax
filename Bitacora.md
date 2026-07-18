@@ -658,3 +658,91 @@ Para habilitar el historial -> Options -> VFB Settings. Este historial se guarda
 
 A la derecha hay opciones de post, como exposure y lens effects
 - Recomendado activar Lens Effects, dandole click y habilitando el check de Enable Lens Effects.
+
+# Semana 9
+
+# Vinculación jerarquica
+
+Select and link (icono de cadena):
+
+Click en un objeto y arrastrar hacia el siguiente para vincular. El primer objeto es el hijo y el segundo es el padre.
+
+
+Nota: gizmos de posicionamiento siempre apuntan a los ejes espaciales debido a que el Reference Coordinate System está por defecto en View.
+- Cambiar a local
+
+## Iluminación natural
+
+Luz natural: luz del sol
+
+Archive: lo mismo que es un package de Adobe. Guarda las rutas de archivos externos
+
+Agregar objetos -> icono de bombillo
+
+Photometric/Standard: nativas del programa
+Standard: Arnold
+Vray: luces nuevas
+
+
+VraySun:
+
+Would you like to automatically add a VraySky environment map? Yes
+
+Sun parameters:
+
+- Intensity multiplier: 0.03 (recomendado)
+- Size multiplier: para cambiar intensidad de difuminación en sombras. Entre más alto más difuminado
+
+Cloud parameters:
+
+- Density: controla cantidad de nubes
+- Cirrus amount: controla la cantidad de nubes de tipo cirrus (Vray genera otro tipo de nubes por defecto)
+- TODO: repasar nombre de nubes por defecto
+
+
+Entorno/environment: fondo del render
+
+
+## Luz artificial
+
+Luces como focos.
+
+Distribución: forma en se dispersa la luz.
+- Angular
+- Omnidireccional
+
+Atenuación: cantidad de luz que se emite
+
+Multiplier: intensidad o fuerza
+
+VrayLight: luces artificiales
+
+### Parametros generales:
+- On (check)
+- Type (forma de luz)
+- Largo y ancho
+
+### Plane/disc light
+
+Utiliza el tamaño de Targeted (por defecto no está checked)
+
+- Directional
+- Preview: selected (por defecto en never)
+
+- Generar esquemas de luz a partir de multiples luces. Utilizar intensidades que sean realistas.
+
+### Options
+- Invisible (para esconder la fuente de la luz pero no su incidencia en la escena, util para no tener que alinear una fuente luz con un modelo de una lampara por ejemplo). Nota: no oculta las reflecciones.
+- Affect reflections: quita la luz de los reflejos, pero deja la incidencia.
+
+Para hacer que un objeto ya no sea una instancia se puede ir al modificador y dar click en make unique.
+
+
+### Sphere light
+
+El multiplier hay que manejarlo diferente debido a que es una luz omnidireccional, hay que usarla con menos multiplier.
+
+
+## Mesh light
+
+dar click en icono de vray mesh light (que tiene forma de dado D20)
