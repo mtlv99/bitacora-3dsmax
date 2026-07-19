@@ -2,8 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// 👇 Cambia estos dos valores y todo lo demás se actualiza solo
-const GITHUB_USER = 'TU-USUARIO';
+const GITHUB_USER = 'mtlv-99';
 const REPO_NAME = 'bitacora-3dsmax';
 
 // https://astro.build/config
