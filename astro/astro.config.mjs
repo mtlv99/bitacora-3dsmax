@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-const GITHUB_USER = 'mtlv-99';
+const GITHUB_USER = 'mtlv99';
 const REPO_NAME = 'bitacora-3dsmax';
 
 // https://astro.build/config
